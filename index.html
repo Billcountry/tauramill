@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Tauramill Ltd</title>
     <!--Import Google Icon Font-->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -70,7 +71,51 @@
 
 </div>
 <div id="contact">
-
+<div class="center" style="margin-bottom: 5px;">
+                <a href="#" class="waves-effect waves-light btn white blue-text text-darken-4"><i
+                        class="fa fa-facebook"></i>
+                    Facebook</a>
+                <a href="#" class="waves-effect waves-light btn white light-blue-text"><i class="fa fa-twitter"></i>
+                    Twitter</a>
+                <a href="#" class="waves-effect waves-light btn white red-text"><i class="fa fa-google-plus"></i>
+                    Google+</a>
+            </div>
+    <div class="row flex">
+        <form class="col s12 m6 center light-blue-text text-darken-3">
+            <h5 class="center light-blue-text">Contact Us</h5>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa fa-user prefix"></i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Your Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fa fa-envelope-o prefix"></i>
+                    <input type="email" class="validate">
+                    <label for="icon_prefix">Email</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="fa fa-phone prefix"></i>
+                    <input type="tel" class="validate">
+                    <label for="icon_telephone">Phone</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa fa-edit prefix"></i>
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Message</label>
+                </div>
+            </div>
+            <button class="btn btn-flat light-blue white-text"><i class="fa fa-send-o"> Submit</i></button>
+        </form>
+        <div class='col s12 m6'>
+            <div id="map"></div>
+            <p class='flow-text black-text'><strong>Our Location:</strong>
+Paramount Plaza<br>3rd Floor Suite A12<br><span class='small'><strong>Address:</strong> Kipande, Globe Round About, Muranga Rd, Nairobi</span>
+</p>
+        </div>
+    </div>
 </div>
 <div id="faq">
 
@@ -104,6 +149,7 @@
     </div>
 </footer>
 <script type="text/javascript">
+    var first = true;
     var page = function (identifier) {
         document.querySelector("#home").classList.add('d-none');
         document.querySelector("#products").classList.add('d-none');
@@ -113,7 +159,9 @@
         if (document.querySelector(identifier).classList.contains('d-none')) {
             document.querySelector(identifier).classList.remove('d-none');
         }
-        $('html, body').animate({scrollTop: 0}, 800);
+        if(!first)
+            $('html, body').animate({scrollTop: 0}, 800);
+        first = false;
         var menus = document.querySelectorAll('.menu');
         for (var pos in menus) {
             var menu = menus[pos];
@@ -128,6 +176,7 @@
             }
         }
     };
+ 
     switch (window.location.hash) {
         case "#home":
         case "#products":
@@ -152,8 +201,26 @@
             }, // A function to be called when sideNav is closed
         }
     );
+function initMap() {
+        var uluru = {lat: -1.2771205, lng: 36.8215105};
+        var infowindow = new google.maps.InfoWindow({content: "<h5>Our Office</h5><p class='flow-text'>Paramount Plaza<br>3rd Floor Suite A12<br><small><strong>Address:</strong> Kipande, Globe Round About, Muranga Rd, Nairobi</small></p>"});
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+          place: "Paramount Plaza"
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
     document.querySelector("#preloader").classList.add('d-none');
-    console.log("Writeedn")
 </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEjw1gRkHPdTce6PkeoxWb7DDewC7oZC0&callback=initMap">
+    </script>
 </body>
 </html>

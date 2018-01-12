@@ -7,6 +7,15 @@
     z-index: 10000;
 }
 
+#map {
+    min-height: 400px !important;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .d-none{
     display: none !important;
 }
