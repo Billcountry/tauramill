@@ -1,0 +1,78 @@
+#preloader {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    position: absolute;
+    z-index: 10000;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.logo-img {
+    max-height: 64px !important;
+    width: auto;
+    padding: 15px 0 !important;
+}
+
+.navbar-fixed {
+    margin-top: -64px;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.semi-bold {
+    font-weight: 400 !important;
+}
+
+.z-150 {
+    font-size: 150% !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #1C2331;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 10%;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #aaaaaa;
+}
+
+/*
+Sticky footer using flex box
+Courtesy: https://css-tricks.com/couple-takes-sticky-footer/
+ */
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/*
+Prevent overwrapping of buttons arranged vertically
+ */
+a.btn {
+    margin: 2px;
+}
+
