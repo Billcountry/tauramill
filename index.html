@@ -214,7 +214,8 @@ function initMap() {
         });
         var marker = new google.maps.Marker({
           position: uluru,
-          map: map
+          map: map,
+            label: "Paramount Plaza, 3rd Floor Suite A12"
         });
         marker.addListener('click', function() {
           infowindow.open(map, marker);
