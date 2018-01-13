@@ -77,7 +77,7 @@
                     Google+</a>
             </div>
     <div class="row flex">
-        <form action="javascript:{ send_message(); }" class="col s12 m6 center red-text text-darken-3">
+        <form action="javascript:{ send_message(); }" name="message" class="col s12 m6 center red-text text-darken-3">
             <h5 class="center red-text">Contact Us</h5>
             <div class="row">
                 <div class="input-field col s12">
@@ -226,6 +226,7 @@ function initMap() {
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEjw1gRkHPdTce6PkeoxWb7DDewC7oZC0&callback=initMap">
     </script>
+<script src="https://smtpjs.com/v2/smtp.js"></script>
 <script src="js/actions.js"></script>
 <script>
     document.querySelector("#preloader").classList.add('d-none');

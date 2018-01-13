@@ -19,7 +19,7 @@ function send_message() {
         "billcountrymwaniki@gmail.com",
         "Web Contact Form: "+subject,
         data,
-        {token: "95c92fdb-2523-486e-bd4a-8840516ad0b3"});
+        {token: "39310210-96da-4a23-89a4-930f87f52b3b"});
 
     document.forms.message.reset();
     toast("Message Sent.");
