@@ -153,3 +153,8 @@ a{
     cursor: pointer !important;
 }
 
+.collection-item.red-text.active{
+    background-color: red !important;
+    color: white !important;
+}
+

@@ -5,6 +5,7 @@
     <!--Import Font awesome Icon Font-->
     <link href='css/font-awesome.min.css' rel='stylesheet'>
     <script src="https://use.fontawesome.com/cad94addce.js"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
@@ -74,28 +75,32 @@
                 </p>
             </div>
             <div class="card-panel red darken-2 white-text d-none" id="sl2">
-                <h4 class="semi-bold"><i class="fa fa-shield"></i> Private Investigators <i class="fa fa-shield"></i></h4>
+                <h4 class="semi-bold"><i class="fa fa-shield"></i> Private Investigators <i class="fa fa-shield"></i>
+                </h4>
                 <div class="row">
                     <div class="col s12 m4 l3 center">
                         <img src="img/detective-1424831_1280.png" class="profile-sm-md">
                     </div>
                     <div class="col s12 m8 l9 flow-text lmcs">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid
-                            assumenda
-                        <p class="center-align lmcs"><a class="waves-effect waves-light white-text">Learn more...</a></p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid
+                        assumenda
+                        <p class="center-align lmcs"><a class="waves-effect waves-light white-text">Learn more...</a>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="card-panel red darken-2 white-text d-none" id="sl3">
-                <h4 class="semi-bold"><i class="fa fa-binoculars"></i> Surveillance <i class="fa fa-binoculars"></i></h4>
+                <h4 class="semi-bold"><i class="fa fa-binoculars"></i> Surveillance <i class="fa fa-binoculars"></i>
+                </h4>
                 <div class="row">
                     <div class="col s12 m4 l3 center">
                         <img src="img/detective-with-binoculars.png" class="profile-sm-md">
                     </div>
                     <div class="col s12 m7 l8 left flow-text lmcs">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid assumenda
-                            fugiat officia, optio repudiandae unde? A, est.
-                        <p class="center-align lmcs"><a class="waves-effect waves-light white-text">Learn more...</a></p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid assumenda
+                        fugiat officia, optio repudiandae unde? A, est.
+                        <p class="center-align lmcs"><a class="waves-effect waves-light white-text">Learn more...</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -140,11 +145,32 @@
         </div>
 
         <div class="">
-            
+
         </div>
     </div>
     <div id="products" class="d-none">
-
+        <nav class="red darken-2">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="#!" class="breadcrumb">Products</a>
+                    <a href="#!" class="breadcrumb">Private Investigation</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row flex">
+            <div class="collection col s12 hide-on-small-and-down m4 l2">
+                <a href="#" class="collection-item waves-effect waves-red red-text">Private Investigation</a>
+                <a href="#" class="collection-item waves-effect waves-red active red-text">Surveillance</a>
+                <a href="#" class="collection-item waves-effect waves-red red-text">Debt Recovery</a>
+                <a href="#" class="collection-item waves-effect waves-red red-text">Debt Assurance</a>
+            </div>
+            <div class="col s12 m8 l10">
+                <h4 class="red-text center">All Products</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aperiam cupiditate debitis deserunt ea eos error fuga fugiat fugit, impedit incidunt iste magni maxime mollitia natus nemo neque nobis non optio possimus praesentium reprehenderit sequi sunt temporibus tenetur vel voluptatem? Assumenda aut consequuntur earum eos excepturi illo iure labore nesciunt saepe voluptas. A adipisci, corporis fugiat harum in odit omnis repellat repellendus velit voluptate! Accusamus consequatur deleniti doloribus eius eveniet fugit laborum quas reiciendis suscipit temporibus, ullam ut veritatis voluptas. Accusamus ad assumenda culpa, eaque eos excepturi fugiat fugit ipsam libero maxime minima natus possimus quaerat, quam quidem reprehenderit similique sit totam velit voluptatibus. Ad consequuntur, debitis dolore et fuga illo in iste nulla perferendis voluptatem. Ab animi aperiam at consequuntur cumque dolorum enim esse eum exercitationem itaque labore laudantium, maiores minima, nesciunt, provident quia repellat repudiandae voluptate. Aliquid animi, beatae dolores, doloribus esse excepturi expedita, magni maxime natus nesciunt qui quibusdam ratione reprehenderit suscipit temporibus tenetur vitae voluptates.
+                </p>
+            </div>
+        </div>
     </div>
     <div id="about" class="d-none">
 
@@ -237,6 +263,7 @@
     <div class="footer-copyright red darken-3 center">
         <div class="container semi-bold">
             ©2018 Tauramill Ltd, All rights reserved.
+            <span class="right">Built By: <a href="#" class="white-text">Berloc Systems</a></span>
         </div>
     </div>
 </footer>
@@ -298,15 +325,15 @@
     var slide = 1;
     setInterval(function () {
         slide += 1;
-        if(slide>3){
+        if (slide > 3) {
             slide = 1;
         }
         document.querySelector("#sl1").classList.add('d-none');
         document.querySelector("#sl2").classList.add('d-none');
         document.querySelector("#sl3").classList.add('d-none');
-        if(document.querySelector("#sl"+slide).classList.contains('d-none')){
-            document.querySelector("#sl"+slide).classList.remove('d-none');
-            Materialize.fadeInImage("#sl"+slide);
+        if (document.querySelector("#sl" + slide).classList.contains('d-none')) {
+            document.querySelector("#sl" + slide).classList.remove('d-none');
+            Materialize.fadeInImage("#sl" + slide);
         }
     }, 8000);
     function initMap() {
