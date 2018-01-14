@@ -137,4 +137,19 @@ Responsive profile image
 a.white-text:hover {
     border-bottom: 1px solid white !important;
 }
+a.red-text:hover {
+    border-bottom: 1px solid red !important;
+}
+
+.f-large{
+    font-size: large;
+}
+
+.b_top{
+    border-top: 3px solid red;
+}
+
+a{
+    cursor: pointer !important;
+}
 
