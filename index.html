@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Tauramill Ltd</title>
-    <!--Import Google Icon Font-->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--Import Font awesome Icon Font-->
+    <link href='css/font-awesome.min.css' rel='stylesheet'>
+    <script src="https://use.fontawesome.com/cad94addce.js"></script>
     <link href="css/styles.css" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
@@ -60,41 +61,42 @@
         <li class="menu"><a href="#faq" onclick="page(this.hash)"><i class="fa fa-question-circle"></i> FAQ</a></li>
     </ul>
 
-    <div id="home">
-        <div class="carousel carousel-slider red accent-4 center" data-indicators="true"
-             style="min-height: 50vh !important;">
-            <div class="carousel-item center red accent-4 row white-text">
-                <div class="col s12 m5 l4 right-align" style="position: relative;">
-                    <img src="img/detective-1424831_1280.png" style="height: 200px !important; width: auto;">
-                </div>
-                <div class="col s12 m7 l8">
-                    <h4 class="left-align">
-                        Investigations
-                    </h4>
-                    <h5 class="left-align">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid assumenda
-                        fugiat officia, optio repudiandae unde? A, est.
-                    </h5>
-                </div>
-                <div class="col s12 center">
-                    <button class="btn waves-effect waves-red white red-text">Read More</button>
+    <div id="home" style="margin-top: -8px !important;">
+        <div class="center">
+            <div class="card-panel red darken-2 white-text" id="sl1">
+                <h4 class="semi-bold">Welcome To Tauramill</h4>
+                <p class="flow-text" style="font-size: 150% !important;">
+                    We are dedicated to provide the best of services in:<br>
+                    <i class="fa fa-shield"></i> Private Investigators <i class="fa fa-shield"></i><br>
+                    <i class="fa fa-binoculars"></i> Surveillance <i class="fa fa-binoculars"></i><br>
+                    <i class="fa fa-legal"></i> Debt Recovery <i class="fa fa-legal"></i><br>
+                    <i class="fa fa-credit-card-alt"></i> Debt Assurance <i class="fa fa-credit-card-alt"></i><br>
+                </p>
+            </div>
+            <div class="card-panel red darken-2 white-text d-none" id="sl2">
+                <h4 class="semi-bold"><i class="fa fa-shield"></i> Private Investigators <i class="fa fa-shield"></i></h4>
+                <div class="row">
+                    <div class="col s12 m4 l3 center">
+                        <img src="img/detective-1424831_1280.png" class="profile-sm-md">
+                    </div>
+                    <div class="col s12 m8 l9 flow-text lmcs">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid
+                            assumenda
+                        <p class="center-align lmcs"><a class="waves-effect waves-light white-text">Learn more...</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item center red accent-4 row white-text">
-                <div class="col s12 m5 l4 right-align" style="position: relative;">
-                    <img src="img/detective-with-binoculars.png" style="height: 200px !important; width: auto;">
-                </div>
-                <div class="col s12 m7 l8">
-                    <h4 class="left-align">
-                        Surveillance
-                    </h4>
-                    <h5 class="left-align">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid assumenda
-                        fugiat officia, optio repudiandae unde? A, est.
-                    </h5>
-                </div>
-                <div class="col s12 center">
-                    <button class="btn waves-effect waves-red white red-text">Read More</button>
+            <div class="card-panel red darken-2 white-text d-none" id="sl3">
+                <h4 class="semi-bold"><i class="fa fa-binoculars"></i> Surveillance <i class="fa fa-binoculars"></i></h4>
+                <div class="row">
+                    <div class="col s12 m4 l3 center">
+                        <img src="img/detective-with-binoculars.png" class="profile-sm-md">
+                    </div>
+                    <div class="col s12 m7 l8 left flow-text lmcs">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium sit. Aliquid assumenda
+                            fugiat officia, optio repudiandae unde? A, est.
+                        <p class="center-align lmcs"><a class="waves-effect waves-light white-text">Learn more...</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -249,7 +251,22 @@
             }, // A function to be called when sideNav is closed
         }
     );
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    $('.carousel').carousel({fullWidth: true});
+
+    var slide = 1;
+    setInterval(function () {
+        slide += 1;
+        if(slide>3){
+            slide = 1;
+        }
+        document.querySelector("#sl1").classList.add('d-none');
+        document.querySelector("#sl2").classList.add('d-none');
+        document.querySelector("#sl3").classList.add('d-none');
+        if(document.querySelector("#sl"+slide).classList.contains('d-none')){
+            document.querySelector("#sl"+slide).classList.remove('d-none');
+            Materialize.fadeInImage("#sl"+slide);
+        }
+    }, 8000);
     function initMap() {
         var uluru = {lat: -1.2771205, lng: 36.8215105};
         var infowindow = new google.maps.InfoWindow({content: "<h5>Our Office</h5><p class='flow-text'>Paramount Plaza<br>3rd Floor Suite A12<br><small><strong>Address:</strong> Kipande, Globe Round About, Muranga Rd, Nairobi</small></p>"});

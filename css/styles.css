@@ -16,7 +16,7 @@
     flex-wrap: wrap;
 }
 
-.d-none{
+.d-none {
     display: none !important;
 }
 
@@ -41,7 +41,6 @@
 .z-150 {
     font-size: 150% !important;
 }
-
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -85,6 +84,57 @@ a.btn {
     margin: 2px;
 }
 
-.justify{
+.justify {
     text-align: justify !important;
 }
+
+/*
+Responsive profile image
+ */
+@media (min-width: 768px) {
+    .profile-sm-md {
+        width: 160px;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-sm-md {
+        width: 140px;
+    }
+}
+
+.lmcs {
+    text-align: left !important;
+}
+
+@media (max-width: 700px) {
+    .profile-sm-md {
+        width: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-sm-md {
+        width: 100px;
+    }
+
+    .lmcs {
+        text-align: center !important;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .profile-sm-md {
+        width: 80px;
+    }
+}
+
+.profile-sm-md {
+    height: auto;
+}
+
+a.white-text:hover {
+    border-bottom: 1px solid white !important;
+}
+
