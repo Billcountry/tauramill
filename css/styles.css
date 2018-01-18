@@ -1,62 +1,62 @@
 #preloader {
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0 !important;
-    position: absolute;
-    z-index: 10000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 !important;
+	position: absolute;
+	z-index: 10000;
 }
 
 #map {
-    min-height: 400px !important;
+	min-height: 400px !important;
 }
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .d-none {
-    display: none !important;
+	display: none !important;
 }
 
 .logo-img {
-    max-height: 64px !important;
-    width: auto;
-    padding: 15px 0 !important;
+	max-height: 64px !important;
+	width: auto;
+	padding: 15px 0 !important;
 }
 
 .navbar-fixed {
-    margin-top: -64px;
+	margin-top: -64px;
 }
 
 .bold {
-    font-weight: bold !important;
+	font-weight: bold !important;
 }
 
 .semi-bold {
-    font-weight: 400 !important;
+	font-weight: 400 !important;
 }
 
 .z-150 {
-    font-size: 150% !important;
+	font-size: 150% !important;
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
+	width: 7px;
 }
 
 ::-webkit-scrollbar-track-piece {
-    background-color: #1C2331;
+	background-color: #1C2331;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #cccccc;
-    border-radius: 10%;
+	background-color: #cccccc;
+	border-radius: 10%;
 }
 
 ::-webkit-scrollbar-button {
-    background-color: #aaaaaa;
+	background-color: #aaaaaa;
 }
 
 /*
@@ -64,97 +64,97 @@ Sticky footer using flex box
 Courtesy: https://css-tricks.com/couple-takes-sticky-footer/
  */
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    padding-top: 64px;
-    display: flex;
-    flex-direction: column;
+	padding-top: 64px;
+	display: flex;
+	flex-direction: column;
 }
 
 .content {
-    flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 
 /*
 Prevent overwrapping of buttons arranged vertically
  */
 a.btn {
-    margin: 2px;
+	margin: 2px;
 }
 
 .justify {
-    text-align: justify !important;
+	text-align: justify !important;
 }
 
 /*
 Responsive profile image
  */
 @media (min-width: 768px) {
-    .profile-sm-md {
-        width: 160px;
-    }
+	.profile-sm-md {
+		width: 160px;
+	}
 }
 
 @media (max-width: 767px) {
-    .profile-sm-md {
-        width: 140px;
-    }
+	.profile-sm-md {
+		width: 140px;
+	}
 }
 
 .lmcs {
-    text-align: left !important;
+	text-align: left !important;
 }
 
 @media (max-width: 700px) {
-    .profile-sm-md {
-        width: 120px;
-    }
+	.profile-sm-md {
+		width: 120px;
+	}
 }
 
 @media (max-width: 600px) {
-    .profile-sm-md {
-        width: 100px;
-    }
+	.profile-sm-md {
+		width: 100px;
+	}
 
-    .lmcs {
-        text-align: center !important;
-    }
+	.lmcs {
+		text-align: center !important;
+	}
 
 }
 
 @media (max-width: 500px) {
-    .profile-sm-md {
-        width: 80px;
-    }
+	.profile-sm-md {
+		width: 80px;
+	}
 }
 
 .profile-sm-md {
-    height: auto;
+	height: auto;
 }
 
 a.white-text:hover {
-    border-bottom: 1px solid white !important;
+	border-bottom: 1px solid white !important;
 }
 a.red-text:hover {
-    border-bottom: 1px solid red !important;
+	border-bottom: 1px solid red !important;
 }
 
 .f-large{
-    font-size: large;
+	font-size: large;
 }
 
 .b_top{
-    border-top: 3px solid red;
+	border-top: 3px solid red;
 }
 
 a{
-    cursor: pointer !important;
+	cursor: pointer !important;
 }
 
 .collection-item.red-text.active{
-    background-color: red !important;
-    color: white !important;
+	background-color: red !important;
+	color: white !important;
 }
 
