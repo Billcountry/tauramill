@@ -39,4 +39,7 @@ function load_images(){
     }
 
     document.querySelector("#preloader").classList.add('d-none');
+    document.querySelector("#sl1").style.backgroundImage = "url('img/feature_banner.jpg')";
+    document.querySelector("#sl2").style.backgroundImage = "url('img/aa.jpg')";
+    document.querySelector("#sl3").style.backgroundImage = "url('img/pic.jpg')";
 }

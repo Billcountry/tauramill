@@ -7,6 +7,11 @@
 	z-index: 10000;
 }
 
+#sl1, #sl2, #sl3{
+	background-size: cover;
+	text-shadow: 2px 2px 2px #000000;
+}
+
 #map {
 	min-height: 400px !important;
 }
