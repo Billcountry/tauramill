@@ -39,7 +39,40 @@ function load_images(){
     }
 
     document.querySelector("#preloader").classList.add('d-none');
-    document.querySelector("#sl1").style.backgroundImage = "url('img/feature_banner.jpg')";
-    document.querySelector("#sl2").style.backgroundImage = "url('img/aa.jpg')";
-    document.querySelector("#sl3").style.backgroundImage = "url('img/pic.jpg')";
+    document.querySelector("#sl1").style.backgroundImage = "url('img/handshake_art_caro_original_43728.jpg')";
+}
+
+function close_service() {
+    if(document.querySelector("#service_dash").classList.contains('d-none')){
+        document.querySelector("#service_dash").classList.remove('d-none');
+    }
+    $('html, body').animate({scrollTop: 0}, 800);
+    document.querySelector("#service_disp").classList.add('d-none');
+    document.querySelector("#service-bread").classList.add('d-none');
+}
+
+function open_service(file, title){
+    if(document.querySelector("#preloader").classList.contains('d-none')){
+        document.querySelector("#preloader").classList.remove('d-none');
+    }
+    $.ajax({
+        url: file,
+        success: function (data) {
+            document.querySelector("#service_disp").innerHTML = data;
+            document.querySelector("#bread-text").innerHTML = title;
+            if(document.querySelector("#service-bread").classList.contains('d-none')){
+                document.querySelector("#service-bread").classList.remove('d-none');
+            }
+            if(document.querySelector("#service_disp").classList.contains('d-none')){
+                document.querySelector("#service_disp").classList.remove('d-none');
+            }
+            $('html, body').animate({scrollTop: 0}, 800);
+            document.querySelector("#service_dash").classList.add('d-none');
+            document.querySelector("#preloader").classList.add('d-none');
+        },
+        error: function (err) {
+            document.querySelector("#preloader").classList.add('d-none');
+            toast("Unable to load "+title);
+        }
+    })
 }

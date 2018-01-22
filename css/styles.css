@@ -7,9 +7,9 @@
 	z-index: 10000;
 }
 
-#sl1, #sl2, #sl3{
+#sl1{
 	background-size: cover;
-	text-shadow: 2px 2px 2px #000000;
+	text-shadow: 1px 1px 1px #FFFFFF;
 }
 
 #map {
@@ -163,3 +163,8 @@ a{
 	color: white !important;
 }
 
+#service_dash, #service_disp{
+	border-left: 1px solid red;
+	border-right: 1px solid red;
+	border-right: 1px solid red;
+}
