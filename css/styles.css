@@ -168,3 +168,50 @@ a{
 	border-right: 1px solid red;
 	border-right: 1px solid red;
 }
+
+/* Sets up our marquee, and inner content */
+.marquee {
+	overflow: hidden;
+	position: relative;
+	padding-left: 100%;
+	/* Some browsers may require -webkit-animation */
+	animation: reduce 20s linear infinite;
+}
+
+.marquee__inner {
+	white-space: nowrap;
+	display: inline-block;
+	/* Some browsers may require -webkit-animation */
+	animation: scroll 20s linear infinite;
+}
+
+/* Creates two white-to-transparent gradients at the ends of the marquee */
+.marquee::before, .marquee::after {
+	z-index: 1;
+	top: 0; left: 0;
+	position: absolute;
+	width: 50px; height: 100%;
+	content: ""; display: block;
+}
+
+.marquee::after {
+	left: auto; right: 0;
+	transform: rotate(180deg);
+}
+
+@keyframes reduce {
+	to {
+		padding-left: 0;
+	}
+}
+
+@keyframes scroll {
+	to {
+		transform: translateX( -100% );
+	}
+}
+
+.marquee__inner img{
+	max-height: 160px;
+	width: auto;
+}
