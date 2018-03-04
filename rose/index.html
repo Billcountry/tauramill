@@ -209,15 +209,15 @@
 						<div class="modal-body">
 							<form name="quiz_form">
 								<div class="form-group">
-									<label for="quiz_title" class="form-control-label">Old Password:</label>
+									<label for="old_pass" class="form-control-label">Old Password:</label>
 									<input type="password" class="form-control" id="old_pass">
 								</div>
 								<div class="form-group">
-									<label for="quiz_title" class="form-control-label">New Password:</label>
+									<label for="new_pass" class="form-control-label">New Password:</label>
 									<input type="password" class="form-control" id="new_pass">
 								</div>
 								<div class="form-group">
-									<label for="quiz_title" class="form-control-label">Confirm Password:</label>
+									<label for="conf_pass" class="form-control-label">Confirm Password:</label>
 									<input type="password" class="form-control" id="conf_pass">
 								</div>
 								<div id="pass_change_errors">
@@ -236,7 +236,13 @@
 	</div>
 
 	<div class="jumbotron row" style="display: none; padding-top: 10px;" id="home">
-		<h2>Places to Live</h2>
+		<div>
+			<h2 style="float: left;">Places to Live</h2>
+			<form class="form-inline input-group-sm" style="float: right;">
+				<button class="btn btn-sm btn-outline-success bg-faded" data-toggle="modal"	data-target="#" title="add a new plot">Add Property
+				</button>
+			</form>
+		</div>
 		<table class="table table-striped" id="plots_list" style="display: table;">
 			<tbody id="all_plots">
 				<tr>
